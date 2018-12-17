@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Andrea Cimmino">
+
+    <title>GenQueVKG</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/resume.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("June 2, 2019 9:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+          
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+          
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + " days " //+ hours + "h "+ minutes + "m " + seconds + "s ";
+          
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <h3 class="navbar-brand js-scroll-trigger">Time to start:</h3>
+      <h3 id=demo></h3>
+     <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/profile.jpg" alt="">
+        </span>
+      </a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#audience">Audience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#program">Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#presenters">Presenters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#materials">Materials</a>
+          </li>
+        </ul>
+      </div>
+      <div style="color: white">
+        <a href="http://www.oeg-upm.net/">
+        <img src="static/img/oeg-logo.png" width="50px" />
+        <p style="color: white"><strong>Powered by OEG</strong></p></a>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">
+            <span class="text-primary">GenQueVKG2019</span>
+          </h1>
+          <div class="subheading mb-5"><span class="text-primary">Gen</span>erating and <span class="text-primary">Que</span>rying <span class="text-primary">V</span>irtual <span class="text-primary">K</span>nowledge <span class="text-primary">G</span>raphs from heterogeneous data sources</div>
+          
+          <p class="lead mb-5">Despite the emergence of RDF knowledge bases, exposed via SPARQL endpoints or as Linked Data, formats like CSV, JSON or XML are still the most used for exposing data on the web. Some solutions have been proposed to describe and integrate these resources using mapping languages (e.g. RML, CSVW, kR2RML, etc) and many of those are equipped with associated RDF generators (e.g. RML-Mapper, CSVW generator, Karma, etc).that they can not manage efficiently the data when is volatile (they can retrieve not updated data) and the performance along the integration process is a key factor (rapid answers over the data) As these solutions generate materialized RDF, they cannot efficiently deal with volatile data or provide a SPARQL entry point directly to the data sources. In this tutorial, we explain how to use a suite of tools to manage  and exploitdata in heterogeneous formats (CSV, RDB, JSON or REST API) without the need to materialize theresulting RDF in a triple store. First, we present TADA, a tool for automatically annotating CSV files using existing Knowledge Graphs. Second, we present HELIO, a Linked Data publisher that provides a unified access in real-time to multiple heterogeneous data sources. Finally, we present an OBDA approach to exploit CSV published on the Web providing access via SPARQL or GraphQL</p>
+
+          <div class="social-icons">
+            <a href="https://github.com/orgs/OEG-DataIntegration/">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="audience">
+        <div class="my-auto">
+          <h2 class="mb-5">Audience</h2>
+          <p>The target audience for this tutorial is researchers and practitioners both from industry and academia who are interested in integrating heterogeneous data on the web using semantic technologies. The tools that will be presented during the tutorial will be available online. Knowledge about standard mapping languages (R2)RML is not required but we will give a brief summary of the practical use of these proposals as they will be a key factor among all the solutions that will be presented in the tutorial. For attracting participants we will use channels like mailing lists and social media. We will create a twitter account for the tutorial and use the hashtag #GenQueVKB2019 for referring to the tutorial. We will also create an attractive web page for the tutorial.</p>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="program">
+        <div class="my-auto">
+         
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Automatic tabular data annotation</h3>
+              <div class="subheading mb-3">Part I: Semantic Annotation and Efficient Knowledge Graph Generation</div>
+ 
+              <p>TADA performs semantic annotation on tabular datasets. Given a tabular data file and an existing Knowledge Graph, it will automatically annotate the columns of the input data file with types from the given Knowledge Graph exploiting the data within</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2019 - Date to be fixed</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Real-Time Link Data Generation</h3>
+              <div class="subheading mb-3">Part I: Semantic Annotation and Efficient Knowledge Graph Generation</div>
+       
+              <p>Helio publishes Linked Data from heterogeneous datasets in real-time, providing an unified access and view of the gathered data. Helio is a mapping-based approach, which supports complex function expressions to clean data and the use of fuzzy linking rules to generate links among published instances.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2019 - Date to be fixed</span>
+            </div>
+          </div>
+
+           <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Querying CSV from OBDA</h3>
+              <div class="subheading mb-3">Part II: OBDA approach for querying heterogeneous data</div>
+
+              <p>Morph is a suite of OBDA tools focused on the optimization of SPARQL-to-SQL translation process. It starts as a framework for querying relational databases using R2RML mappings and SPARQL queries and now has also incorporated an access to CSV files using state-of-the-art proposals like mapping languages (RML with FnO) and annotations (CSVW).</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2019 - Date to be fixed</span>
+            </div>
+          </div>
+
+           <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Semantic Web for developers</h3>
+              <div class="subheading mb-3">Part II: OBDA approach for querying heterogeneous data</div>
+        
+              <p>GraphQL is a graph query language that allows query heterogeneous data and services. During the last part of the tutorial, we will show how to query the virtual Knowledge Graph using GraphQL.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2019 - Date to be fixed</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="presenters">
+        <div class="my-auto">
+          
+          <!--<h2 class="mb-5">Part I: Semantic Annotations and Efficient Knowledge Graph Generation</h2>-->
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Ahmad Alobaid</h3>
+              <p>Ahmad Alobaid is a researcher and PhD student of the Ontology Engineering Group - Universidad Politécnica de Madrid since 2016, his main research area is on the semantic labelling of tabular data using machine learning and existing knowledge graphs. He co-organized a tutorial about <a href="http://ontoology.linkeddata.es/ ">Ontoology</a>, a widely used ontology development tool, in EKAW2018</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">email</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">David Chaves-Fraga</h3>
+              <p>David Chaves-Fraga is a researcher and PhD student of the Ontology Engineering Group - Universidad Politécnica de Madrid since 2016, his work is currently focused on the generation of virtual knowledge graph from CSV on the Web using mapping languages. He is also an assistant lecturer in Semantic Web courses and the main coordinator of the formative international program Open Summer of Code in Spain.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">March 2019 - Time to be fixed</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Andrea Cimmino</h3>
+              <p>Helio publishes Linked Data from heterogeneous datasets in real-time, providing an unified access and view of the gathered data. Helio is a mapping-based approach, which supports complex function expressions to clean data and the use of fuzzy linking rules to generate links among published instances.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">March 2019 - Time to be fixed</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Oscar Corcho</h3>
+              <p>Oscar Corcho is a full professor at Universidad Politécnica de Madrid and one of the leaders of the Ontology Engineering Group. He also leads the Data Integration area of the group, where all the presenters come from. He has been working and teaching Data Integration, OBDA, and Linked Data since 2004.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">March 2019 - Time to be fixed</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Freddy Priyatna</h3>
+              <p>Freddy Priyatna is a postdoctoral researcher at the Ontology Engineering Group - Universidad Politécnica de Madrid since 2012. He holds a PhD in the same research group where he developed the R2RML engine morph-RDB together with R2RML mapping generator, MIRROR. His main research area is on providing query access to virtual knowledge graph. He also takes part as an assistant lecturer teaching OBDA in several Semantic Web courses.  </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">March 2019 - Time to be fixed</span>
+            </div>
+          </div>
+
+         
+
+
+
+        </div>
+
+      </section>
+
+      
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="materials">
+        <div class="my-auto">
+          <h2 class="mb-5">Materials</h2>
+
+          <div class="subheading mb-3">Technologies</div>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              SPARQL
+            </li>
+            <li class="list-inline-item">
+              RDF
+            </li>
+            <li class="list-inline-item">
+              R2RML
+            </li>
+            <li class="list-inline-item">
+              RML
+            </li>
+            <li class="list-inline-item">
+              GraphQL
+            </li>
+            <li class="list-inline-item">
+              JSON
+            </li>
+            <li class="list-inline-item">
+              REST API
+            </li>
+            <li class="list-inline-item">
+              CSV
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Software</div>
+          <ul class="fa-ul mb-0">
+            <li>TADA</li>
+            <li>HELIO</li>
+            <li>Morph Suite</li>
+            <li>Graph QL Generator (improve name)</li>
+          </ul>
+        </div>
+      </section>
+
+      
+
+     
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/resume.min.js"></script>
+
+  </body>
+
+</html>
